@@ -33,7 +33,6 @@ test("Successful authorization", async () => {
   await page.fill('[placeholder="Email"]', email);
   await page.fill('[placeholder="Пароль"]', password);
   await page.click('[data-testid="login-submit-btn"]');
-  //await expect(page).toHaveURL("https://netology.ru/profile");
   await expect(page.locator("h2")).toContainText(["Моё обучение"]);
   await page.screenshot({ path: "screenshotSuccessful.png", fullPage: true });
   browser.close();
