@@ -9,8 +9,6 @@ const {
 
 test("Failed authorization", async () => {
   const browser = await chromium.launch({
-    headless: false,
-    slowMo: 3000,
   });
   const page = await browser.newPage("https://netology.ru/?modal=sign_in");
   await page.goto("https://netology.ru/?modal=sign_in");
@@ -25,8 +23,6 @@ test("Failed authorization", async () => {
 
 test("Successful authorization", async () => {
   const browser = await chromium.launch({
-    headless: false,
-    slowMo: 3000,
   });
   const page = await browser.newPage("https://netology.ru/?modal=sign_in");
   await page.goto("https://netology.ru/?modal=sign_in");
